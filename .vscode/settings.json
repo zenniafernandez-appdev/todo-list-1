@@ -41,9 +41,12 @@
 		"editor.formatOnSave": true
   },
   "vscode-erb-beautify.keepBlankLines": 1,
+  "vscode-erb-beautify.useBundler": true,
   "ruby.intellisense": false,
   "gitpod.openInStable.neverPrompt": true,
   "redhat.telemetry.enabled": false,
+  "solargraph.useBundler": true,
+  "rufo.useBundler": true,
   "emmet.includeLanguages": {
     "erb": "html"
   },
