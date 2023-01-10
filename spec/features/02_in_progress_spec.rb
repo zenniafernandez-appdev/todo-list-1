@@ -27,8 +27,6 @@ describe "The In Progress section" do
       find("button", :text => /Move to In Progress/i ).click
     end
 
-    in_progress_section_div = find("div.done")
-
     expect(page).to have_tag("div.in_progress") do     
       with_tag("ul") do
         with_tag("li", text: /Work on Todo List app/i)
