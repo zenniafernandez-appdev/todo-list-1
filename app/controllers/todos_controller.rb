@@ -18,15 +18,19 @@ class TodosController < ApplicationController
   end
 
   def create_todo_form
-    current_user = User.where({ :id => session.fetch(:user_id) }).at(0)
+    #current_user = User.where({ :id => session.fetch(:user_id) }).at(0)
     a_todo = Todo.new
-    a_todo.user_id = session.fetch(:user_id)
+    #a_todo.user_id = session.fetch(:user_id)
+    a_todo.user_id = @current_user.id
     a_todo.content = params.fetch("query_content")
+    a_todo.status = "next"
 
     if a_todo.valid?
       a_todo.save
 
       redirect_to("/")
+    else
+      redirect_to("/", { :notice => "error" })
     end
   end
 

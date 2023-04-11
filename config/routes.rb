@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get("delete_todo/:id", { :controller => "todos", :action => "destroy_todo" })
 
-  get("/modify_todo/:id", { :controller => "todos", :action => "update_todo" })
+  post("/modify_todo/:id", { :controller => "todos", :action => "update_todo" })
 
   #------------------------------
 
